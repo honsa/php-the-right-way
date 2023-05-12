@@ -9,7 +9,7 @@ You can download the binaries from [windows.php.net/download][php-downloads]. Af
 
 For learning and local development, you can use the built in webserver with PHP 5.4+ so you don't need to worry about
 configuring it. If you would like an "all-in-one" which includes a full-blown webserver and MySQL too then tools such
-as the [Web Platform Installer][wpi], [XAMPP][xampp], [EasyPHP][easyphp], [OpenServer][openserver] and [WAMP][wamp] will
+as the [XAMPP][xampp], [EasyPHP][easyphp], [OpenServer][openserver] and [WAMP][wamp] will
 help get a Windows development environment up and running fast. That said, these tools will be a little different from
 production so be careful of environment differences if you are working on Windows and deploying to Linux.
 
@@ -23,13 +23,12 @@ live. If you are developing on Windows and deploying to Linux (or anything non-W
 
 Chris Tankersley has a very helpful blog post on what tools he uses to do [PHP development using Windows][windows-tools].
 
-[easyphp]: http://www.easyphp.org/
+[easyphp]: https://www.easyphp.org/
 [phpmanager]: http://phpmanager.codeplex.com/
-[openserver]: http://open-server.ru/
-[wamp]: http://www.wampserver.com/en/
-[php-downloads]: http://windows.php.net/download/
-[php-iis]: http://php.iis.net/
-[windows-path]: http://www.windows-commandline.com/set-path-command-line/
-[windows-tools]: http://ctankersley.com/2016/11/13/developing-on-windows-2016/
-[wpi]: https://www.microsoft.com/web/downloads/platform.aspx
-[xampp]: http://www.apachefriends.org/en/xampp.html
+[openserver]: https://ospanel.io/
+[wamp]: https://www.wampserver.com/en/
+[php-downloads]: https://windows.php.net/download/
+[php-iis]: https://php.iis.net/
+[windows-path]: https://www.windows-commandline.com/set-path-command-line/
+[windows-tools]: https://ctankersley.com/2016/11/13/developing-on-windows-2016/
+[xampp]: https://www.apachefriends.org/

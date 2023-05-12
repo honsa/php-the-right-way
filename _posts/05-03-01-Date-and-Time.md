@@ -8,7 +8,7 @@ anchor:  date_and_time
 
 PHP has a class named DateTime to help you when reading, writing, comparing or calculating with date and time. There
 are many date and time related functions in PHP besides DateTime, but it provides nice object-oriented interface to
-most common uses. It can handle time zones, but that is outside this short introduction.
+most common uses. DateTime can handle time zones, but that is outside the scope of this short introduction.
 
 To start working with DateTime, convert raw date and time string to an object with `createFromFormat()` factory method
 or do `new DateTime` to get the current date and time. Use `format()` method to convert DateTime back to a string for
@@ -19,12 +19,12 @@ output.
 $raw = '22. 11. 1968';
 $start = DateTime::createFromFormat('d. m. Y', $raw);
 
-echo 'Start date: ' . $start->format('Y-m-d') . "\n";
+echo 'Start date: ' . $start->format('Y-m-d') . PHP_EOL;
 {% endhighlight %}
 
 Calculating with DateTime is possible with the DateInterval class. DateTime has methods like `add()` and `sub()` that
-take a DateInterval as an argument. Do not write code that expect same number of seconds in every day, both daylight
-saving and timezone alterations will break that assumption. Use date intervals instead. To calculate date difference
+take a DateInterval as an argument. Do not write code that expects the same number of seconds in every day. Both daylight
+saving and time zone alterations will break that assumption. Use date intervals instead. To calculate date difference
 use the `diff()` method. It will return new DateInterval, which is super easy to display.
 
 {% highlight php %}
@@ -34,17 +34,16 @@ $end = clone $start;
 $end->add(new DateInterval('P1M6D'));
 
 $diff = $end->diff($start);
-echo 'Difference: ' . $diff->format('%m month, %d days (total: %a days)') . "\n";
+echo 'Difference: ' . $diff->format('%m month, %d days (total: %a days)') . PHP_EOL;
 // Difference: 1 month, 6 days (total: 37 days)
 {% endhighlight %}
 
-On DateTime objects you can use standard comparison:
+You can use standard comparisons on DateTime objects:
 
 {% highlight php %}
 <?php
 if ($start < $end) {
-    echo "Start is before the end!\n";
-}
+    echo "Start is before the end!" . PHP_EOL;}
 {% endhighlight %}
 
 One last example to demonstrate the DatePeriod class. It is used to iterate over recurring events. It can take two
@@ -66,5 +65,5 @@ A popular PHP API extension is [Carbon](https://carbon.nesbot.com/). It inherits
 * [Read about DateTime][datetime]
 * [Read about date formatting][dateformat] (accepted date format string options)
 
-[datetime]: https://secure.php.net/book.datetime
-[dateformat]: https://secure.php.net/function.date
+[datetime]: https://www.php.net/book.datetime
+[dateformat]: https://www.php.net/function.date

@@ -31,9 +31,9 @@ if (strpos('testing', 'test') !== false) {    // true, as strict comparison was 
 }
 {% endhighlight %}
 
-* [Comparison operators](http://php.net/language.operators.comparison)
-* [Comparison table](http://php.net/types.comparisons)
-* [Comparison cheatsheet](http://phpcheatsheets.com/index.php?page=compare)
+* [Comparison operators](https://www.php.net/language.operators.comparison)
+* [Comparison table](https://www.php.net/types.comparisons)
+* [Comparison cheatsheet](https://phpcheatsheets.com/index.php?page=compare)
 
 ## Conditional statements
 
@@ -73,14 +73,14 @@ function test($a)
 
 {% endhighlight %}
 
-* [If statements](http://php.net/control-structures.if)
+* [If statements](https://www.php.net/control-structures.if)
 
 ### Switch statements
 
 Switch statements are a great way to avoid typing endless if's and elseif's, but there are a few things to be aware of:
 
 - Switch statements only compare values, and not the type (equivalent to '==')
-- They Iterate case by case until a match is found. If no match is found, then the default is used (if defined)
+- They iterate case by case until a match is found. If no match is found, then the default is used (if defined)
 - Without a 'break', they will continue to implement each case until reaching a break/return
 - Within a function, using 'return' alleviates the need for 'break' as it ends the function
 
@@ -106,7 +106,7 @@ function test($a)
 }
 {% endhighlight %}
 
-* [Switch statements](http://php.net/control-structures.switch)
+* [Switch statements](https://www.php.net/control-structures.switch)
 * [PHP switch](http://phpswitch.com/)
 
 ## Global namespace
@@ -131,8 +131,8 @@ function array()
 }
 {% endhighlight %}
 
-* [Global space](http://php.net/language.namespaces.global)
-* [Global rules](http://php.net/userlandnaming.rules)
+* [Global space](https://www.php.net/language.namespaces.global)
+* [Global rules](https://www.php.net/userlandnaming.rules)
 
 ## Strings
 
@@ -156,7 +156,7 @@ $a = 'Multi-line example'      // concatenation operator (.)
     . 'of what to do';
 {% endhighlight %}
 
-* [String Operators](http://php.net/language.operators.string)
+* [String Operators](https://www.php.net/language.operators.string)
 
 ### String types
 
@@ -184,7 +184,7 @@ echo 'This is my string, look at how pretty it is.';    // no need to parse a si
  */
 {% endhighlight %}
 
-* [Single quote](http://php.net/language.types.string#language.types.string.syntax.single)
+* [Single quote](https://www.php.net/language.types.string#language.types.string.syntax.single)
 
 #### Double quotes
 
@@ -234,7 +234,7 @@ $juice = array('apple', 'orange', 'plum');
 echo "I drank some juice made of {$juice[1]}s";   // $juice[1] will be parsed
 {% endhighlight %}
 
-* [Double quotes](http://php.net/language.types.string#language.types.string.syntax.double)
+* [Double quotes](https://www.php.net/language.types.string#language.types.string.syntax.double)
 
 #### Nowdoc syntax
 
@@ -248,7 +248,7 @@ Example of string
 spanning multiple lines
 using nowdoc syntax.
 $a does not parse.
-EOD;                        // closing 'EOD' must be on it's own line, and to the left most point
+EOD;                        // closing 'EOD' must be on its own line, and to the left most point
 
 /**
  * Output:
@@ -260,7 +260,7 @@ EOD;                        // closing 'EOD' must be on it's own line, and to th
  */
 {% endhighlight %}
 
-* [Nowdoc syntax](http://php.net/language.types.string#language.types.string.syntax.nowdoc)
+* [Nowdoc syntax](https://www.php.net/language.types.string#language.types.string.syntax.nowdoc)
 
 #### Heredoc syntax
 
@@ -276,7 +276,7 @@ Example of string
 spanning multiple lines
 using heredoc syntax.
 $a are parsed.
-EOD;                        // closing 'EOD' must be on it's own line, and to the left most point
+EOD;                        // closing 'EOD' must be on its own line, and to the left most point
 
 /**
  * Output:
@@ -288,7 +288,7 @@ EOD;                        // closing 'EOD' must be on it's own line, and to th
  */
 {% endhighlight %}
 
-* [Heredoc syntax](http://php.net/language.types.string#language.types.string.syntax.heredoc)
+* [Heredoc syntax](https://www.php.net/language.types.string#language.types.string.syntax.heredoc)
 
 > It should be noted that multiline strings can also be formed by continuing them across multilines in a statement. _e.g._
 
@@ -323,10 +323,10 @@ results can vary. If you are working with a small number of values, concatenatio
 values, interpolating is minutely faster.
 
 Regardless of what you are doing with strings, none of the types will ever have any noticeable impact on your
-application. Trying to rewrite code to use one or the other is always an exercise in futility, so avoid this micro-
-optimization unless you really understand the meaning and impact of the differences.
+application. Trying to rewrite code to use one or the other is always an exercise in futility, so avoid this
+micro-optimization unless you really understand the meaning and impact of the differences.
 
-* [Disproving the Single Quotes Performance Myth](http://nikic.github.io/2012/01/09/Disproving-the-Single-Quotes-Performance-Myth.html)
+* [Disproving the Single Quotes Performance Myth](https://www.npopov.com/2012/01/09/Disproving-the-Single-Quotes-Performance-Myth.html)
 
 
 ## Ternary operators
@@ -362,7 +362,7 @@ return ($a == 5) ? 'yay' : 'nope';    // this example will return 'yay'
 {% endhighlight %}
 
 It should be noted that you do not need to use a ternary operator for returning a boolean value. An example of this
-would be.
+would be:
 
 {% highlight php %}
 <?php
@@ -413,22 +413,4 @@ return ($a != 3 && $b != 4) || $c == 5;
 Since PHP 5.3, it is possible to leave out the middle part of the ternary operator.
 Expression "expr1 ?: expr3" returns expr1 if expr1 evaluates to TRUE, and expr3 otherwise.
 
-* [Ternary operators](http://php.net/language.operators.comparison)
-
-## Variable declarations
-
-At times, coders attempt to make their code "cleaner" by declaring predefined variables with a different name. What
-this does in reality is to double the memory consumption of said script. For the example below, let us say an example
-string of text contains 1MB worth of data, by copying the variable you've increased the scripts execution to 2MB.
-
-{% highlight php %}
-<?php
-$about = 'A very long string of text';    // uses 2MB memory
-echo $about;
-
-// vs
-
-echo 'A very long string of text';        // uses 1MB memory
-{% endhighlight %}
-
-* [Performance tips](http://web.archive.org/web/20140625191431/https://developers.google.com/speed/articles/optimizing-php)
+* [Ternary operators](https://www.php.net/language.operators.comparison)

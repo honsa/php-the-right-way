@@ -44,7 +44,7 @@ When you use bound parameters with [PDO](#databases), it will sanitize the input
 
 Sometimes it is required to allow some safe HTML tags in the input when including it in the HTML page. This is very
 hard to do and many avoid it by using other more restricted formatting like Markdown or BBCode, although whitelisting
-libraries like [HTML Purifier][html-purifier] exists for this reason.
+libraries like [HTML Purifier][html-purifier] exist for this reason.
 
 [See Sanitization Filters][2]
 
@@ -52,7 +52,7 @@ libraries like [HTML Purifier][html-purifier] exists for this reason.
 
 It is dangerous to `unserialize()` data from users or other untrusted sources.  Doing so can allow malicious users to instantiate objects (with user-defined properties) whose destructors will be executed, **even if the objects themselves aren't used**.  You should therefore avoid unserializing untrusted data.
 
-If you absolutely must unserialize data from untrusted sources, use PHP 7's [`allowed_classes`][unserialize] option to restrict which object types are allowed to be unserialized.
+Use a safe, standard data interchange format such as JSON (via [`json_decode`][json_decode] and [`json_encode`][json_encode]) if you need to pass serialized data to the user.
 
 ### Validation
 
@@ -62,11 +62,12 @@ phone number, or age when processing a registration submission.
 [See Validation Filters][3]
 
 
-[1]: https://secure.php.net/book.filter
-[2]: https://secure.php.net/filter.filters.sanitize
-[3]: https://secure.php.net/filter.filters.validate
-[4]: https://secure.php.net/function.filter-var
-[5]: https://secure.php.net/function.filter-input
-[6]: https://secure.php.net/security.filesystem.nullbytes
+[1]: https://www.php.net/book.filter
+[2]: https://www.php.net/filter.filters.sanitize
+[3]: https://www.php.net/filter.filters.validate
+[4]: https://www.php.net/function.filter-var
+[5]: https://www.php.net/function.filter-input
+[6]: https://www.php.net/security.filesystem.nullbytes
 [html-purifier]: http://htmlpurifier.org/
-[unserialize]: https://secure.php.net/manual/function.unserialize.php
+[json_decode]: https://www.php.net/manual/function.json-decode.php
+[json_encode]: https://www.php.net/manual/function.json-encode.php

@@ -27,9 +27,9 @@ frameworks and open source apps like WordPress. Unfortunately, Apache uses more 
 cannot handle as many visitors at the same time.
 
 Apache has several possible configurations for running PHP. The most common and easiest to setup is the [prefork MPM]
-with mod_php5. While it isn't the most memory efficient, it is the simplest to get working and to use. This is probably
+with `mod_php`. While it isn't the most memory efficient, it is the simplest to get working and to use. This is probably
 the best choice if you don't want to dig too deeply into the server administration aspects. Note that if you use
-mod_php5 you MUST use the prefork MPM.
+`mod_php` you MUST use the prefork MPM.
 
 Alternatively, if you want to squeeze more performance and stability out of Apache then you can take advantage of the
 same FPM system as nginx and run the [worker MPM] or [event MPM] with mod_fastcgi or mod_fcgid. This configuration will
@@ -46,7 +46,7 @@ If you are running Apache 2.4 or later, you can use [mod_proxy_fcgi] to get grea
 
 
 [nginx]: https://nginx.org/
-[phpfpm]: https://secure.php.net/install.fpm
+[phpfpm]: https://www.php.net/install.fpm
 [secure-nginx-phpfpm]: https://nealpoole.com/blog/2011/04/setting-up-php-fastcgi-and-nginx-dont-trust-the-tutorials-check-your-configuration/
 [apache-modules]: https://httpd.apache.org/docs/2.4/mod/
 [prefork MPM]: https://httpd.apache.org/docs/2.4/mod/prefork.html
@@ -54,7 +54,7 @@ If you are running Apache 2.4 or later, you can use [mod_proxy_fcgi] to get grea
 [event MPM]: https://httpd.apache.org/docs/2.4/mod/event.html
 [apache]: https://httpd.apache.org/
 [apache-MPM]: https://httpd.apache.org/docs/2.4/mod/mpm_common.html
-[mod_fastcgi]: https://blogs.oracle.com/opal/entry/php_fpm_fastcgi_process_manager
-[mod_fcgid]: hhttps://httpd.apache.org/mod_fcgid/
+[mod_fastcgi]: https://blogs.oracle.com/opal/post/php-fpm-fastcgi-process-manager-with-apache-2
+[mod_fcgid]: https://httpd.apache.org/mod_fcgid/
 [mod_proxy_fcgi]: https://httpd.apache.org/docs/current/mod/mod_proxy_fcgi.html
 [tutorial-mod_proxy_fcgi]: https://serversforhackers.com/video/apache-and-php-fpm

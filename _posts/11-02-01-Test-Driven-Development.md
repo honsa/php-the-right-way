@@ -33,12 +33,13 @@ The other use for unit tests is contributing to open source. If you can write a 
 which accepts pull requests then you should suggest this as a requirement.
 
 [PHPUnit](https://phpunit.de/) is the de-facto testing framework for writing unit tests for PHP applications, but there
-are several alternatives
+are several alternatives:
 
 * [atoum](https://github.com/atoum/atoum)
-* [Kahlan](https://github.com/crysalead/kahlan)
+* [Kahlan](https://github.com/kahlan/kahlan)
 * [Peridot](https://peridot-php.github.io/)
-* [SimpleTest](http://simpletest.org)
+* [Pest](https://pestphp.com/)
+* [SimpleTest](https://github.com/simpletest/simpletest)
 
 ### Integration Testing
 
@@ -62,7 +63,7 @@ users of the application.
 
 #### Functional Testing Tools
 
-* [Selenium](https://docs.seleniumhq.org/)
-* [Mink](http://mink.behat.org/)
+* [Selenium](https://www.selenium.dev/)
+* [Mink](https://mink.behat.org/)
 * [Codeception](https://codeception.com/) is a full-stack testing framework that includes acceptance testing tools
 * [Storyplayer](https://datasift.github.io/storyplayer/) is a full-stack testing framework that includes support for creating and destroying test environments on demand

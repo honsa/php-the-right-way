@@ -7,9 +7,11 @@ anchor:  php_paas_providers
 ## PHP PaaS Providers {#php_paas_providers_title}
 
 * [AppFog](https://www.ctl.io/appfog/)
+* [Amezmo](https://www.amezmo.com)
 * [AWS Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/)
 * [Cloudways](https://www.cloudways.com/)
-* [Engine Yard Cloud](https://www.engineyard.com/features)
+* [Divio](https://www.divio.com/php/)
+* [Engine Yard Cloud](https://www.engineyard.com/)
 * [fortrabbit](https://www.fortrabbit.com/)
 * [Google App Engine](https://cloud.google.com/appengine/docs/php/)
 * [Heroku](https://devcenter.heroku.com/categories/php-support)

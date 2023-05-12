@@ -67,11 +67,9 @@ standard Exception which is vague, or creating a custom Exception just for that,
 * [Read about Exceptions][exceptions]
 * [Read about SPL Exceptions][splexe]
 * [Nesting Exceptions In PHP][nesting-exceptions-in-php]
-* [Exception Best Practices in PHP 5.3][exception-best-practices53]
 
 
 [splext]: /#standard_php_library
-[exceptions]: https://secure.php.net/language.exceptions
-[splexe]: https://secure.php.net/spl.exceptions
+[exceptions]: https://www.php.net/language.exceptions
+[splexe]: https://www.php.net/spl.exceptions
 [nesting-exceptions-in-php]: https://www.brandonsavage.net/exceptional-php-nesting-exceptions-in-php/
-[exception-best-practices53]: http://ralphschindler.com/2010/09/15/exception-best-practices-in-php-5-3

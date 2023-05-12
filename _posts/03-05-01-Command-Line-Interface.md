@@ -27,11 +27,11 @@ Let's write a simple "Hello, $name" CLI program. To try it out, create a file na
 {% highlight php %}
 <?php
 if ($argc !== 2) {
-    echo "Usage: php hello.php <name>.\n";
+    echo "Usage: php hello.php <name>" . PHP_EOL;
     exit(1);
 }
 $name = $argv[1];
-echo "Hello, $name\n";
+echo "Hello, $name" . PHP_EOL;
 {% endhighlight %}
 
 PHP sets up two special variables based on the arguments your script is run with. [`$argc`][argc] is an integer
@@ -53,9 +53,9 @@ Hello, world
 
  * [Learn about running PHP from the command line][php-cli]
 
-[phpinfo]: https://secure.php.net/function.phpinfo
-[cli-options]: https://secure.php.net/features.commandline.options
-[argc]: https://secure.php.net/reserved.variables.argc
-[argv]: https://secure.php.net/reserved.variables.argv
+[phpinfo]: https://www.php.net/function.phpinfo
+[cli-options]: https://www.php.net/features.commandline.options
+[argc]: https://www.php.net/reserved.variables.argc
+[argv]: https://www.php.net/reserved.variables.argv
 [exit-codes]: https://www.gsp.com/cgi-bin/man.cgi?section=3&amp;topic=sysexits
-[php-cli]: https://secure.php.net/features.commandline.options
+[php-cli]: https://www.php.net/manual/en/features.commandline.php

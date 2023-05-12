@@ -32,7 +32,7 @@ don't try this if your project will contain more than a couple of pages.
 The most classic way and often taken as reference for i18n and l10n is a [Unix tool called `gettext`][gettext]. It dates
 back to 1995 and is still a complete implementation for translating software. It is easy enough to get running, while
 still sporting powerful supporting tools. It is about Gettext we will be talking here. Also, to help you not get messy
-over the command-line, we will be presenting a great GUI application that can be used to easily update your l10n source
+over the command-line, we will be presenting a great GUI application that can be used to easily update your l10n source.
 
 ### Other tools
 
@@ -41,15 +41,15 @@ install or sport additional features or i18n file formats. In this document, we 
 PHP core, but here we list others for completion:
 
 - [aura/intl][aura-intl]: Provides internationalization (I18N) tools, specifically package-oriented per-locale message
-translation. It uses array formats for message. Does not provide a message extractor, but does provide advanced
+translation. It uses array formats for messages. Does not provide a message extractor, but does provide advanced
 message formatting via the `intl` extension (including pluralized messages).
-- [oscarotero/Gettext][oscarotero]: Gettext support with an OO interface; includes improved helper functions, powerful
+- [php-gettext/Gettext][php-gettext]: Gettext support with an OO interface; includes improved helper functions, powerful
 extractors for several file formats (some of them not supported natively by the `gettext` command), and can also export
 to other formats besides `.mo/.po` files. Can be useful if you need to integrate your translation files into other
 parts of the system, like a JavaScript interface.
 - [symfony/translation][symfony]: supports a lot of different formats, but recommends using verbose XLIFF's. Doesn't
 include helper functions nor a built-in extractor, but supports placeholders using `strtr()` internally.
-- [zend/i18n][zend]: supports array and INI files, or Gettext formats. Implements a caching layer to save you from
+- [laminas/laminas-i18n][laminas]: supports array and INI files, or Gettext formats. Implements a caching layer to save you from
 reading the filesystem every time. It also includes view helpers, and locale-aware input filters and validators.
 However, it has no message extractor.
 
@@ -248,7 +248,7 @@ the actual interface. Given that, let's tie together what we have discussed so f
 - [`gettext()`][func] simply translates a `msgid` into its corresponding `msgstr` for a given language. There's also
 the shorthand function `_()` that works the same way;
 - [`ngettext()`][n_func] does the same but with plural rules;
-- there's also [`dgettext()`][d_func] and [`dngettext()`][dn_func], that allows you to override the domain for a single
+- There are also [`dgettext()`][d_func] and [`dngettext()`][dn_func], that allow you to override the domain for a single
 call. More on domain configuration in the next example.
 
 #### 2. A sample setup file (`i18n_setup.php` as used above), selecting the correct locale and configuring Gettext
@@ -373,7 +373,7 @@ As preferred by many people, it is easier to use `_()` instead of `gettext()`. M
 frameworks use something similar to `t()` as well, to make translated code shorter. However, that is the only function
 that sports a shortcut. You might want to add in your project some others, such as `__()` or `_n()` for `ngettext()`,
 or maybe a fancy `_r()` that would join `gettext()` and `sprintf()` calls. Other libraries, such as
-[oscarotero's Gettext][oscarotero] also provide helper functions like these.
+[php-gettext's Gettext][php-gettext] also provide helper functions like these.
 
 In those cases, you'll need to instruct the Gettext utility on how to extract the strings from those new functions.
 Don't be afraid; it is very easy. It is just a field in the `.po` file, or a Settings screen on Poedit. In the editor,
@@ -396,14 +396,14 @@ After including those new rules in the `.po` file, a new scan will bring in your
 * [Wikipedia: i18n and l10n](https://en.wikipedia.org/wiki/Internationalization_and_localization)
 * [Wikipedia: Gettext](https://en.wikipedia.org/wiki/Gettext)
 * [LingoHub: PHP internationalization with gettext tutorial][lingohub]
-* [PHP Manual: Gettext](https://secure.php.net/manual/book.gettext.php)
+* [PHP Manual: Gettext](https://www.php.net/manual/book.gettext.php)
 * [Gettext Manual][manual]
 
 [Poedit]: https://poedit.net
 [poedit_download]: https://poedit.net/download
 [lingohub]: https://lingohub.com/blog/2013/07/php-internationalization-with-gettext-tutorial/
 [lingohub_plurals]: https://lingohub.com/blog/2013/07/php-internationalization-with-gettext-tutorial/#Plurals
-[plural]: http://docs.translatehouse.org/projects/localization-guide/en/latest/l10n/pluralforms.html
+[plural]: https://docs.translatehouse.org/projects/localization-guide/en/latest/l10n/pluralforms.html
 [gettext]: https://en.wikipedia.org/wiki/Gettext
 [manual]: https://www.gnu.org/software/gettext/manual/gettext.html
 [639-1]: https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
@@ -411,17 +411,17 @@ After including those new rules in the `.po` file, a new scan will bring in your
 [rare]: https://www.gnu.org/software/gettext/manual/gettext.html#Rare-Language-Codes
 [func_format]: https://www.gnu.org/software/gettext/manual/gettext.html#Language-specific-options
 [aura-intl]: https://github.com/auraphp/Aura.Intl
-[oscarotero]: https://github.com/oscarotero/Gettext
-[symfony]: https://symfony.com/doc/current/components/translation.html
-[zend]: https://docs.zendframework.com/zend-i18n/translation
+[php-gettext]: https://github.com/php-gettext/Gettext
+[symfony]: https://symfony.com/components/Translation
+[laminas]: https://docs.laminas.dev/laminas-i18n/
 [laravel]: https://laravel.com/docs/master/localization
 [yii]: https://www.yiiframework.com/doc/guide/2.0/en/tutorial-i18n
-[intl]: https://secure.php.net/manual/intro.intl.php
-[ICU project]: http://www.icu-project.org
-[symfony-keys]: https://symfony.com/doc/current/components/translation/usage.html#creating-translations
+[intl]: https://www.php.net/manual/intro.intl.php
+[ICU project]: https://icu.unicode.org/
+[symfony-keys]: https://symfony.com/doc/current/translation.html#using-real-or-keyword-messages
 
-[sprintf]: https://secure.php.net/manual/function.sprintf.php
-[func]: https://secure.php.net/manual/function.gettext.php
-[n_func]: https://secure.php.net/manual/function.ngettext.php
-[d_func]: https://secure.php.net/manual/function.dgettext.php
-[dn_func]: https://secure.php.net/manual/function.dngettext.php
+[sprintf]: https://www.php.net/manual/function.sprintf.php
+[func]: https://www.php.net/manual/function.gettext.php
+[n_func]: https://www.php.net/manual/function.ngettext.php
+[d_func]: https://www.php.net/manual/function.dgettext.php
+[dn_func]: https://www.php.net/manual/function.dngettext.php

@@ -10,21 +10,25 @@ Many frameworks provide their own abstraction layer which may or may not sit on 
 emulate features for one database system that is missing from another by wrapping your queries in PHP methods, giving
 you actual database abstraction instead of just the connection abstraction that PDO provides. This will of course add a
 little overhead, but if you are building a portable application that needs to work with MySQL, PostgreSQL and SQLite
-then a little overhead will be worth it the sake of code cleanliness.
+then a little overhead will be worth it for the sake of code cleanliness.
 
 Some abstraction layers have been built using the [PSR-0][psr0] or [PSR-4][psr4] namespace standards so can be
 installed in any application you like:
 
+* [Atlas][5]
 * [Aura SQL][6]
 * [Doctrine2 DBAL][2]
+* [Medoo][8]
 * [Propel][7]
-* [Zend-db][4]
+* [laminas-db][4]
 
 
-[1]: https://secure.php.net/book.pdo
+[1]: https://www.php.net/book.pdo
 [2]: https://www.doctrine-project.org/projects/dbal.html
-[4]: https://packages.zendframework.com/docs/latest/manual/en/index.html#zendframework/zend-db
+[4]: https://docs.laminas.dev/laminas-db/
+[5]: https://atlasphp.io
 [6]: https://github.com/auraphp/Aura.Sql
-[7]: http://propelorm.org/
+[7]: https://propelorm.org/
+[8]: https://medoo.in/
 [psr0]: https://www.php-fig.org/psr/psr-0/
 [psr4]: https://www.php-fig.org/psr/psr-4/
